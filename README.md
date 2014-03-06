@@ -47,24 +47,7 @@ Fork from http://johnsteven.blog.51cto.com/blog/2523007/1046880
       } 
 </code></pre>
 
-+ config and start uswgi
-vim uwsgi_conf.xml
++ config and start uwsgi
 <pre><code>
-<uwsgi id="app">
-	<plugins>python</plugins>
-	<socket>127.0.0.1:9090</socket>
-	<module>app</module>
-	<master />
-	<pythonpath>/usr/bin/python</pythonpath>
-	<chdir>/home/timo/github/timoseven/SIDB</chdir>
-	<processes>4</processes>
-	<enable-threads>true</enable-threads>
-	<post-buffering>1024</post-buffering>
-	<listen>1024</listen>
-	<memory-report/>
-	<pidfile>/tmp/uwsgi_app.pid</pidfile>
-	<max-requests>65535</max-requests>
-	<daemonize>/home/timo/github/timoseven/SIDB/logs/access.log</daemonize>
-	<log-date/>
-</uwsgi>
+uwsgi -x uwsgi_config.xml
 </code></pre>
