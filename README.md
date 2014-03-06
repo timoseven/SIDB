@@ -48,7 +48,7 @@ Fork from http://johnsteven.blog.51cto.com/blog/2523007/1046880
 </code></pre>
 
 + config and start uswgi
-++ vim uwsgi_conf.xml
+vim uwsgi_conf.xml
 <pre><code>
 <uwsgi id="app">
 	<plugins>python</plugins>
