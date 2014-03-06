@@ -7,6 +7,10 @@ from config.setting import render
 from config.setting import render_plain
 from config.setting import sysconf
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8') 
+
 class Main:
 	def GET(self):
 		if not base.logged():
@@ -987,7 +991,7 @@ class Search:
 		if web.ctx.session.privilege == 0:
 			return render.main(newhosts,pages,page,page_nav)
 		else:
-			return render.main_admin(newhosts,pages,page,page_nav)
+			return render.main_admin(newhosts,pages,page,page_navencode)
 	
 		if input.ops == '1':
 			result = models.searchHostName(input.content)
