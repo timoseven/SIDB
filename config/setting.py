@@ -1,10 +1,13 @@
 # coding: utf-8
 # Author Steven
+# reverion: Timo
+
 import web
 from url import session
 
 # Define database connection
-db = web.database(dbn='mysql', db='yunwei', user='root', pw='root',unix_socket="/tmp/mysql.sock")
+#db = web.database(dbn='mysql', db='sidb', user='sidb', pw='sidbpwd',unix_socket="/tmp/mysql.sock")
+db = web.database(dbn='mysql', db='sidb', user='sidb', passwd='sidbpwd', host='127.0.0.1', port=3306)
 
 # Loading config from database
 result = db.select('config')

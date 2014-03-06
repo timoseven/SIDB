@@ -1,9 +1,10 @@
 <uwsgi id="app">
+	<plugins>python</plugins>
 	<socket>127.0.0.1:9090</socket>
 	<module>app</module>
 	<master />
 	<pythonpath>/usr/bin/python</pythonpath>
-	<chdir>/data/wwwroot/yunwei</chdir>
+	<chdir>/home/timo/github/timoseven/SIDB</chdir>
 	<processes>4</processes>
 	<enable-threads>true</enable-threads>
 	<post-buffering>1024</post-buffering>
@@ -11,7 +12,7 @@
 	<memory-report/>
 	<pidfile>/tmp/uwsgi_app.pid</pidfile>
 	<max-requests>65535</max-requests>
-	<daemonize>/data/wwwroot/yunwei/access.log</daemonize>
+	<daemonize>/home/timo/github/timoseven/SIDB/logs/access.log</daemonize>
 	<log-date/>
 </uwsgi>
 
