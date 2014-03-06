@@ -24,10 +24,10 @@ Fork from http://johnsteven.blog.51cto.com/blog/2523007/1046880
 
 + init database
 <pre><code>create database sidb;</code></pre>
-<pre><code>grant all on sidb.\* to sidb@127.0.0.1 identified by 'sidbpwd';</code></pre>
+<pre><code>grant all on sidb.* to sidb@127.0.0.1 identified by 'sidbpwd';</code></pre>
 <pre><code>flush privileges;</code></pre>
 + import database
-<pre><code>mysql -h 127.0.0.1 -usidb -p sidb \< yunwei.sql</code></pre>
+<pre><code>mysql -h 127.0.0.1 -usidb -p sidb < yunwei.sql</code></pre>
 
 
 + config nginx
