@@ -1,7 +1,7 @@
 SIDB
 ====
 
-SIDB: Servers Infomation DB
+SIDB: Assets(servers and switch) information database 
 
 Fork from http://johnsteven.blog.51cto.com/blog/2523007/1046880
 
