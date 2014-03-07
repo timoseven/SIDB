@@ -16,22 +16,29 @@ Fork from http://johnsteven.blog.51cto.com/blog/2523007/1046880
 
 ### Install step
 + install nginx & mysql
-<pre><code>sudo apt-get install nginx mysql-server</code></pre>
+```
+sudo apt-get install nginx mysql-server
+```
 
 + install python module
-<pre><code>sudo apt-get install python-webpy</code></pre>
-<pre><code>sudo apt-get install python-mysqldb python-xlwt uwsgi-core uwsgi-plugin-http</code></pre>
+```
+sudo apt-get install python-webpy
+sudo apt-get install python-mysqldb python-xlwt uwsgi-core uwsgi-plugin-http
+```
 
 + init database
-<pre><code>create database sidb;</code></pre>
-<pre><code>grant all on sidb.* to sidb@127.0.0.1 identified by 'sidbpwd';</code></pre>
-<pre><code>flush privileges;</code></pre>
+```
+create database sidb;
+grant all on sidb.* to sidb@127.0.0.1 identified by 'sidbpwd';
+flush privileges;
+```
 + import database
-<pre><code>mysql -h 127.0.0.1 -usidb -p sidb < yunwei.sql</code></pre>
-
+```
+mysql -h 127.0.0.1 -usidb -p sidb < yunwei.sql
+```
 
 + config nginx
-<pre><code>
+```
     server 
       { 
         listen       80; 
@@ -42,12 +49,12 @@ Fork from http://johnsteven.blog.51cto.com/blog/2523007/1046880
         } 
         location ^~ /static/ 
         { 
-            alias   /data/wwwroot/yunwei/static/; 
+            alias   /home/timo/github/timoseven/SIDB/static/; 
         } 
       } 
-</code></pre>
+```
 
 + config and start uwsgi
-<pre><code>
+```
 uwsgi -x uwsgi_config.xml
-</code></pre>
+```
