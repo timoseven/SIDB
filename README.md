@@ -17,10 +17,12 @@ Fork from http://johnsteven.blog.51cto.com/blog/2523007/1046880
 ### Bug Fix
 ```
 uwsgi_config.xml add "<plugins>python</plugins>" in python 2.7
-controls/control.py add "import sys
+controls/control.py add 
+"import sys
 reload(sys)
 sys.setdefaultencoding('utf8')" in python 2.7
 ```
+
 ### Install step
 + install nginx & mysql
 ```
@@ -65,3 +67,10 @@ mysql -h 127.0.0.1 -usidb -p sidb < yunwei.sql
 ```
 uwsgi -x uwsgi_config.xml
 ```
+
+### New function plan
++ If change the host list will send the email to admin;
++ Every users only see own project hosts list;
++ Hosts page will add password column;
++ Multi-language support;
++ Session timeout;
