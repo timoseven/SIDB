@@ -1,19 +1,26 @@
 SIDB
 ====
 
-SIDB: Severs Infomation DB
+SIDB: Servers Infomation DB
+
 Fork from http://johnsteven.blog.51cto.com/blog/2523007/1046880
 
 ### Need package
-+ bison-2.5
 + mysql
 + nginx
-+ Python-2.6.X
-+ uwsgi-1.2.3
-+ xlwt-0.7.4
-+ MySQL-python-1.2.3
-+ web.py-0.36
++ Python-2.6+
++ uwsgi
++ xlwt
++ MySQL-python
++ web.py
 
+### Bug Fix
+```
+uwsgi_config.xml add "<plugins>python</plugins>" in python 2.7
+controls/control.py add "import sys
+reload(sys)
+sys.setdefaultencoding('utf8')" in python 2.7
+```
 ### Install step
 + install nginx & mysql
 ```
