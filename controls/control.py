@@ -991,7 +991,7 @@ class Search:
 		if web.ctx.session.privilege == 0:
 			return render.main(newhosts,pages,page,page_nav)
 		else:
-			return render.main_admin(newhosts,pages,page,page_navencode)
+			return render.main_admin(newhosts,pages,page,page_nav)
 	
 		if input.ops == '1':
 			result = models.searchHostName(input.content)
